@@ -77,11 +77,13 @@
 (add-hook 'cider-repl-mode-hook 'subword-mode)
 
 ;; ac-nrepl
-(maybe-install-and-require 'ac-nrepl)
-(add-hook 'cider-mode-hook 'ac-nrepl-setup)
-(add-hook 'cider-repl-mode-hook 'ac-nrepl-setup)
-(eval-after-load "auto-complete"
-  '(add-to-list 'ac-modes 'cider-repl-mode))
+;; (maybe-install-and-require 'ac-nrepl)
+;; (add-hook 'cider-mode-hook 'ac-nrepl-setup)
+;; (add-hook 'cider-repl-mode-hook 'ac-nrepl-setup)
+
+;; (eval-after-load "auto-complete"
+  ;; '(add-to-list 'ac-modes 'cider-repl-mode)
+;;  )
 
 ;; clj-refactor
 (maybe-install-and-require 'clj-refactor)
@@ -403,5 +405,5 @@
     (setq interprogram-cut-function 'paste-to-osx)
     (setq interprogram-paste-function 'copy-from-osx)))
 
-;; Tim 
+;; Tim
 (define-key key-translation-map [?\C-h] [?\C-?])
